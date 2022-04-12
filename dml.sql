@@ -1,3 +1,5 @@
+--全てtestdbのpublicスキーマに作成
+
 ■テーブル作成
 psql -h <hostname> -U postgres
 
