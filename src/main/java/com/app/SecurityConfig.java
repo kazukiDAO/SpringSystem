@@ -53,6 +53,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         // ログイン不要ページの設定
         http
             .authorizeRequests()
+                .antMatchers("/").permitAll() //indexへアクセス許可
                 .antMatchers("/webjars/**").permitAll() //webjarsへアクセス許可
                 .antMatchers("/css/**").permitAll() //cssへアクセス許可
                 .antMatchers("/login").permitAll() //ログインページは直リンクOK

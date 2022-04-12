@@ -56,4 +56,11 @@ public class LoginController {
 		// ログイン画面にリダイレクト
 		return "redirect:/login";
 	}
+	
+	@GetMapping("/")
+	public String index(Model model) {
+		String hostName = Utill.getHostName();
+		model.addAttribute("hostName", hostName);
+		return "/index";
+	}
 }

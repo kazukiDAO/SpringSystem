@@ -1,5 +1,8 @@
 package com.app.login.utill;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.security.core.Authentication;
@@ -27,4 +30,14 @@ public class Utill {
 			}
 		}
 	}
+	
+    public static String getHostName() {
+            InetAddress ia = null;
+			try {
+				ia = InetAddress.getLocalHost();
+			} catch (UnknownHostException e) {
+				e.printStackTrace();
+			}
+            return ia.getHostName();
+    }
 }
