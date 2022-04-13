@@ -61,6 +61,6 @@ public class LoginController {
 	public String index(Model model) {
 		String hostName = Utill.getHostName();
 		model.addAttribute("hostName", hostName);
-		return "/index";
+		return "index";
 	}
 }
